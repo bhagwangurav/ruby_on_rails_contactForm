@@ -1,29 +1,19 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Please check below details,
 
-Things you may want to cover:
+- Ruby version - ruby 2.7.2p137 (2020-10-01 revision 5445e04352) [x64-mingw32]
 
-- Ruby version
+- Rails version - Rails 6.1.3.2
 
-- System dependencies
+- System dependencies - install ruby and rails
 
 - Configuration
 
-- Database creation
+  - Make changes in application.yml file to configure email related details
 
-- Database initialization
+- Database
 
-- How to run the test suite
+  - run migration using rails db:migrate command
 
-- Services (job queues, cache servers, search engines, etc.)
-
-- Deployment instructions
-
-- ...
-  "# ruby_on_rails_contactForm"
-
-# ruby_on_rails_contactForm
-
-ruby on rails contactForm with i18 support
+- run bundle install then rails sto start server
