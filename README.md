@@ -16,4 +16,4 @@ Please check below details,
 
   - run migration using rails db:migrate command
 
-- run bundle install then rails sto start server
+- run bundle install then rails s to start server
