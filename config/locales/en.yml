@@ -30,4 +30,27 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  views:
+    contacts:
+      send_message: "Send Us A Message"
+      msg: "Thank You"
+      nameLabel: "Tell us your name *"
+      fnameValidate: "Type first name"
+      fnamePlaceHolder: "First name"
+      lNameValidate: "Type last name"
+      lNamePlaceHolder: "Last name"
+      mailLabel: "Enter your email *"
+      emailValidate: "Valid email is required: ex@abc.xyz"
+      emailPlaceholder: "Eg. example@email.com"
+      phoneLabel: "Enter phone number"
+      phonPlaceHolder: "Eg. +1 800 000000"
+      messageLabel: "Message *"
+      messageValidate: "Message is required"
+      messagePlaceHolder: "Write us a message"
+      buttonDesc: "Send Message"
+      compAddress: "Address"
+      companyAddDetails: " Mada Center 8th floor, 379 Hudson St, New York, NY 10018 US"
+      letsTalk: "Lets Talk"
+      talkNumber: "+1 800 1236879"
+      generalSupp: "General Support"
+      contactAt: "contact@example.com"

@@ -1,40 +1,47 @@
 <div class="container-contact100">
   <div class="wrap-contact100">
-      <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
-      <%= form_with(model: @contact, remote: true, url: { action: "create" }, class:"contact100-form validate-form") do |form| %>
+    
       
+      <%= form_with(model: @contact, remote: true, url: { action: "create" }, class:"contact100-form validate-form") do |form| %> 
+      <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+      <span class="language">
+        <ul class="changelanguage">
+          <li class="btn btn-warning btn-sm"><%= link_to 'English', root_path(locale: :en) %></li>
+          <li class="btn btn-primary btn-sm"><%= link_to 'Russian', root_path(locale: :ru) %></li>
+        </ul>
+      </span>
       <span class="contact100-form-title">
-        Send Us A Message
-        <% flash.each do |name, msg| %>
-          <%= content_tag :div, msg, class: "alert alert-success" %>
+        <%= t('views.contacts.send_message') %>
+        <% if flash[:notice] %>
+          <%= content_tag :div,  t('views.contacts.msg'), class: "alert alert-success" %>
         <% end %>
       </span>
-      <%= form.label :firstname, "Tell us your name *", class:"label-input100" %>
-      <div class="wrap-input100 rs1-wrap-input100 validate-input" data-validate="Type first name">
-        <%= form.text_field :firstname, class:"input100", placeholder: "First name" %>
+      <%= form.label :firstname, t('views.contacts.nameLabel'), class:"label-input100" %>
+      <div class="wrap-input100 rs1-wrap-input100 validate-input" data-validate="<%= t ('views.contacts.fnameValidate') %>" >
+        <%= form.text_field :firstname, class:"input100", placeholder: t('views.contacts.fnamePlaceHolder') %>
         <span class="focus-input100"></span>
       </div>
-      <div class="wrap-input100 rs2-wrap-input100 validate-input" data-validate="Type last name">
-        <%= form.text_field :lastname, class:"input100", placeholder: "Last name" %>
+      <div class="wrap-input100 rs2-wrap-input100 validate-input" data-validate="<%= t ('views.contacts.lNameValidate') %>">
+        <%= form.text_field :lastname, class:"input100", placeholder: t('views.contacts.lNamePlaceHolder') %>
         <span class="focus-input100"></span>
       </div>
-      <%= form.label :email, "Enter your email *", class:"label-input100" %>
-      <div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
-        <%= form.text_field :email, class:"input100", placeholder: "Eg. example@email.com" %>
+      <%= form.label :email, t('views.contacts.mailLabel'), class:"label-input100" %>
+      <div class="wrap-input100 validate-input" data-validate = "<%= t ('views.contacts.emailValidate') %>">
+        <%= form.text_field :email, class:"input100", placeholder: t('views.contacts.emailPlaceholder') %>
         <span class="focus-input100"></span>
       </div>
-      <%= form.label :phonenumber, "Enter phone number", class:"label-input100" %>
+      <%= form.label :phonenumber, t('views.contacts.phoneLabel'), class:"label-input100" %>
       <div class="wrap-input100">
-        <%= form.text_field :phonenumber, class:"input100", placeholder: "Eg. +1 800 000000" %>
+        <%= form.text_field :phonenumber, class:"input100", placeholder: t('views.contacts.phonPlaceHolder') %>
         <span class="focus-input100"></span>
       </div>
-      <%= form.label :message, "Message *", class:"label-input100" %>
-      <div class="wrap-input100 validate-input" data-validate = "Message is required">
-        <%= form.text_area :message, size: "60x5" , class:"input100", placeholder: "Write us a message" %>
+      <%= form.label :message, t('views.contacts.messageLabel'), class:"label-input100" %>
+      <div class="wrap-input100 validate-input" data-validate = "<%= t ('views.contacts.messageValidate') %>">
+        <%= form.text_area :message, size: "60x5" , class:"input100", placeholder: t('views.contacts.messagePlaceHolder') %>
         <span class="focus-input100"></span>
       </div>
       <div class="container-contact100-form-btn">
-        <%= form.button "Send Message",name:"create", type:"", class:"contact100-form-btn"%>
+        <%= form.button t('views.contacts.buttonDesc'),class:"contact100-form-btn"%>
       </div>
     <% end %>
     <div class="contact100-more flex-col-c-m">
@@ -44,10 +51,10 @@
         </div>
         <div class="flex-col size2">
           <span class="txt1 p-b-20">
-            Address
+            <%= t('views.contacts.compAddress')%>
           </span>
           <span class="txt2">
-            Mada Center 8th floor, 379 Hudson St, New York, NY 10018 US
+            <%= t('views.contacts.companyAddDetails')%>
           </span>
         </div>
       </div>
@@ -57,10 +64,10 @@
         </div>
         <div class="flex-col size2">
           <span class="txt1 p-b-20">
-            Lets Talk
+            <%= t('views.contacts.letsTalk')%>
           </span>
           <span class="txt3">
-            +1 800 1236879
+            <%= t('views.contacts.talkNumber')%>
           </span>
         </div>
       </div>
@@ -70,10 +77,10 @@
         </div>
         <div class="flex-col size2">
           <span class="txt1 p-b-20">
-            General Support
+            <%= t('views.contacts.generalSupp')%>
           </span>
           <span class="txt3">
-            contact@example.com
+            <%= t('views.contacts.contactAt')%>
           </span>
         </div>
       </div>

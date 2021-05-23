@@ -19,7 +19,10 @@
   });
 
   function validate(input) {
-    if ($(input).attr("type") == "email" || $(input).attr("name") == "email") {
+    if (
+      $(input).attr("type") == "email" ||
+      $(input).attr("id") == "contact_email"
+    ) {
       if (
         $(input)
           .val()

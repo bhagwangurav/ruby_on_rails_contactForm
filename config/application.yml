@@ -1,5 +1,5 @@
 # mail configuration
-address: "smtp.gmail.com" # can change adress for yahoo or other
+address: "smtp.gmail.com" # can change adrress for yahoo or other
 mail_username: "" # username
 mail_password: "" # password
 # other configuration like to mail and subject.

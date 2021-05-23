@@ -279,7 +279,7 @@ iframe {
   display: -ms-flexbox;
   display: flex;
   flex-wrap: wrap;
-  padding: 56px 55px 63px 55px;
+  padding: 23px 55px 63px 55px;
 }
 
 .contact100-form-title {
@@ -543,4 +543,26 @@ textarea.input100 {
     visibility: visible;
     opacity: 1;
   }
+}
+
+.changelanguage {
+  float: right;
+}
+.changelanguage li {
+  float: left;
+  list-style: none;
+  text-align: center;
+  margin-right: 30px;
+  width: 80px;
+  line-height: 60px;
+}
+
+.changelanguage li a {
+  text-decoration: none;
+  color: #ffffff;
+  display: block;
+}
+
+.language {
+  width: 100%;
 }
