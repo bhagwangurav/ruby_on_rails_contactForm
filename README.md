@@ -14,6 +14,10 @@ Please check below details,
 
 - Database
 
-  - run migration using rails db:migrate command
+  - Used sqlite3 inbuilt db.
 
-- run bundle install then rails s to start server
+  - To run migration using rails db:migrate command
+
+- run bundle install
+
+- rails s to start server
